@@ -26,8 +26,8 @@ async def read_root():
 # Define the /predict endpoint
 @app.post("/predict")
 async def predict(input: InputData):
-    try:
-        dict_input = json.load(input) 
+    try:     
+        dict_input = input.model_dump()
         input_list = list(dict_input.values())
         model = CatBoostRegressor()
         model = model.load_model(r"C:\repos\immo-eliza-ml\CB_model", format='cbm')
