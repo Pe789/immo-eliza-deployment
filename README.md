@@ -26,9 +26,14 @@ Details on the set up and training steps of the machine learning models, was cov
 # Detail
 
 ## predict.py in api-folder (excercise only)
-to predict the value from a house, based on a trained CB-model. 
-Input taken from input.json,
-Output place in output.json.
+to predict the value from a house, based on a trained CB-model.
+
+Input taken from input.json, Output placed in output.json.
+
+To test, the first code block from test.ipynb can be run:
+
+        from api.predict import make_prediction
+        make_prediction('input.json', 'output.json')
 
 ## app.py in api-folder
 API to predict the value from a house, based on a trained CB-model. 
